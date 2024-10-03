@@ -52,6 +52,8 @@ document.addEventListener("DOMContentLoaded", function() {
         if (allAnswered) {
             statusMessage.innerText = "Prova enviada com sucesso!";
             statusMessage.style.color = "green";
+            const loader = ("Loader.html");
+            loader.style.display = "block";
 
             setTimeout(function () {
                 window.location.href = 'resultado.html';
