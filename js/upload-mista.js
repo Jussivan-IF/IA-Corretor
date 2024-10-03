@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const submitButton = document.getElementById("submitExam");
     const statusMessage = document.getElementById("statusMessage");
 
-    // Adiciona um listener para o botão de gerar questões dissertativas
     generateDissertativasButton.addEventListener("click", function() {
         dissertativasContainer.innerHTML = "";
         const numQuestionsDissertativas = parseInt(document.getElementById("numQuestionsDissertativas").value);
@@ -30,8 +29,6 @@ document.addEventListener("DOMContentLoaded", function() {
             dissertativasContainer.appendChild(questionDiv);
         }
     });
-
-    // Adiciona um listener para o botão de gerar questões objetivas
     generateObjetivasButton.addEventListener("click", function() {
         objetivasContainer.innerHTML = "";
         const numQuestionsObjetivas = parseInt(document.getElementById("numQuestionsObjetivas").value);
@@ -49,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const radioContainer = document.createElement("div");
             radioContainer.classList.add("radio-container");
 
-            for (let j = 1; j <= 5; j++) { // Supondo 5 alternativas
+            for (let j = 1; j <= 5; j++) {
                 const radio = document.createElement("input");
                 radio.type = "radio";
                 radio.id = `q${i}-alt${j}`;
@@ -66,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Adiciona um listener para o botão de enviar a prova
     submitButton.addEventListener("click", function() {
         const numQuestionsDissertativas = parseInt(document.getElementById("numQuestionsDissertativas").value);
         const numQuestionsObjetivas = parseInt(document.getElementById("numQuestionsObjetivas").value);
