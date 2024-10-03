@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload da Prova Dissertativa</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload da Prova Dissertativa</h1>
+        <form id="uploadForm">
+            <label for="pdfUpload">Faça o upload da prova (PDF):</label>
+            <input type="file" id="pdfUpload" accept=".pdf" required>
+            <br><br>
+            <label for="numQuestions">Número de questões:</label>
+            <input type="number" id="numQuestions" min="1" required>
+            <button type="button" id="generateQuestions">Gerar Questões</button>
+            <div id="questionsContainer"></div>
+            <button type="button" id="submitExam">Enviar Prova</button>
+        </form>
+        <div id="statusMessage"></div>
+    </div>
+    <script src="js/upload-dissertativa.js"></script>
+</body>
+</html>

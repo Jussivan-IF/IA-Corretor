@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload da Prova Mista</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload da Prova Mista</h1>
+        <form id="uploadForm">
+            <label for="pdfUpload">Faça o upload da prova (PDF):</label>
+            <input type="file" id="pdfUpload" accept=".pdf" required>
+            <br>
+
+            <label for="numQuestionsDissertativas">Número de questões dissertativas:</label>
+            <input type="number" id="numQuestionsDissertativas" min="1" required>
+            <button type="button" id="generateDissertativas">Gerar Questões Dissertativas</button>
+            <div id="dissertativasContainer"></div>
+            <br>
+
+            <label for="numQuestionsObjetivas">Número de questões objetivas:</label>
+            <input type="number" id="numQuestionsObjetivas" min="1" required>
+            <button type="button" id="generateObjetivas">Gerar Questões Objetivas</button>
+            <div id="objetivasContainer"></div>
+            <br>
+
+            <button type="button" id="submitExam">Enviar Prova</button>
+        </form>
+        <div id="statusMessage"></div>
+    </div>
+    <script src="js/upload-mista.js"></script>
+</body>
+</html>

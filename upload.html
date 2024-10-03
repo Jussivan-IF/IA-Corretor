@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Corretor</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Envie sua Prova</h2>
+        <form id="uploadForm">
+            <input type="text" placeholder="Nome da Prova" required>
+            <input type="file" accept=".pdf, .docx" required>
+            <textarea placeholder="Insira as respostas esperadas aqui..." rows="6" required></textarea>
+            <button type="submit">Enviar para Correção</button>
+        </form>
+        <div class="history">
+            <h3>Histórico de Provas Corrigidas</h3>
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

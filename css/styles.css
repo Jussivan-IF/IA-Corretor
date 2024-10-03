@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.history {
+    margin-top: 20px;
+}
+
+.error-message {
+    color: red;
+    margin: 10px 0;
+    font-size: 0.9em;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+}
+
+.question {
+    margin: 20px 0;
+}
+
+.question div {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.question input[type="radio"] {
+    margin-right: 5px;
+}
+
+.question label[for^="q"] {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Estiliza o form e alinhamento */
+#questionsContainer {
+    margin-top: 20px;
+}
+
+#questionsContainer .question {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#questionsContainer .question label {
+    margin-right: 20px;
+}
+
+.resultado-text{
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
