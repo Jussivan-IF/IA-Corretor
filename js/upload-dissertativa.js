@@ -4,6 +4,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const submitButton = document.getElementById("submitExam");
     const statusMessage = document.getElementById("statusMessage");
 
+    // Criação da barra de carregamento
+    const loadingBar = document.createElement("div");
+    loadingBar.id = "loadingBar";
+    loadingBar.style.width = "0%";
+    loadingBar.style.height = "20px";
+    loadingBar.style.backgroundColor = "green";
+    loadingBar.style.display = "none"; // Inicialmente escondida
+    document.body.appendChild(loadingBar);
+
     generateButton.addEventListener("click", function() {
         questionsContainer.innerHTML = "";
 
@@ -53,9 +62,19 @@ document.addEventListener("DOMContentLoaded", function() {
             statusMessage.innerText = "Prova enviada com sucesso!";
             statusMessage.style.color = "green";
 
-            setTimeout(function () {
-                window.location.href = 'resultado.html';
-            }, 5000);
+            // Mostra a barra de carregamento
+            loadingBar.style.display = "block";
+            let width = 0;
+
+            const loadingInterval = setInterval(function() {
+                if (width >= 100) {
+                    clearInterval(loadingInterval);
+                    window.location.href = 'resultado.html';
+                } else {
+                    width++;
+                    loadingBar.style.width = width + "%";
+                }
+            }, 50); // Atualiza a barra a cada 50ms
         } else {
             statusMessage.innerText = "Por favor, preencha todas as questões.";
             statusMessage.style.color = "red";
